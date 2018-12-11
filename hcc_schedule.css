@@ -11,3 +11,17 @@
    Supporting Files: 
 
 */
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+}
+
+/* .empty {
+    border: none;
+} */

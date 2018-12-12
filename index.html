@@ -14,34 +14,60 @@
       Filename:   index.html
 
    -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Addeds in the stylesheets -->
+  <link rel="stylesheet" href="hcc_styles.css">
   <link rel="stylesheet" href="hcc_schedule.css">
+
+  <title>Hamilton Conference Center</title>
 
 </head>
 
 <body>
+  <!-- The header -->
   <header>
+    <!-- The navigation bar -->
     <nav>
       <ul>
-        <li><a href="">Home Page</a></li>
-        <li><a href="">Reservations</a></li>
-        <li><a href="">Facilities</a></li>
-        <li><a href="">Virtual Tour</a></li>
-        <li><a href="">Staff</a></li>
-        <li><a href="">Calendar of Events</a></li>
-        <li><a href="">Contact Info</a></li>
-        <li><a href="">Directions</a></li>
-        <li><a href="">FAQ</a></li>
+        <li><a href="#">Home Page</a></li>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Virtual Tour</a></li>
+        <li><a href="#">Staff</a></li>
+        <li><a href="#">Calendar of Events</a></li>
+        <li><a href="#">Contact Info</a></li>
+        <li><a href="#">Directions</a></li>
+        <li><a href="#">FAQ</a></li>
       </ul>
     </nav>
   </header>
   <section>
+
+    <h1>Hamilton Conference Center</h1>
+    <!-- The first Table -->
     <table>
+      <!-- Column groups -->
       <colgroup>
+        <!-- A column group with an id of firstCol -->
         <col id="firstCol">
+        <!-- A column group with an id of datCol and spans across 7 columns. -->
         <col id="dataCol" colspan="7">
       </colgroup>
+      <!-- The header of the table -->
       <thead>
+        <!-- A table row -->
         <tr>
+          <!-- A table data cell that spans across 8 columns -->
+          <td colspan="8" class="empty">Reservations for Conference Rooms</td>
+        </tr>
+        <tr>
+          <!-- A table data cell that spans across 8 columns -->
+          <td colspan="8" class="empty">Tuesday, April 10</td>
+        </tr>
+        <!-- The row containing the headers -->
+        <tr>
+          <!-- A table header -->
           <th>Room <br> Time</th>
           <th>Sunrise Room</th>
           <th>Mountain View Room</th>
@@ -52,42 +78,57 @@
           <th>Green Room</th>
         </tr>
       </thead>
-      <tfoot></tfoot>
+      <!-- The table footer (The end of the footer) -->
+      <tfoot>
+        <!-- A table row -->
+        <tr>
+          <!-- A table data cell that spans across 8 columns. -->
+          <td class="empty" colspan="8">To reserve a room, please contact Yancy Inwe at extension 388 or by e-mail at
+            <a href="mailto:yancyinwe@hconfcenter.org">yancyinwe@hconfcenter.org</a>.
+            Reservations should be made at least 48 hours in advance. Cancellations require 24 hour notice. Room
+            deposits will
+            not be returned for cancellations within 24 hours of the scheduled event.</td>
+        </tr>
+      </tfoot>
+      <!-- The primary data of the table -->
       <tbody>
+        <!-- The first table row -->
         <tr>
           <th>8:00 AM</th>
+          <!-- A table data cell that spans across 5 rows. (Down) -->
           <td rowspan="5">Marriage Encounter</td>
           <td rowspan="3">Breakfast Club of Ohio</td>
           <td rowspan="9">Computer Expo Setup</td>
+          <!-- These table data cells are empty because there is nothing scheduled in those time periods. The class of empty is used to determine empty time slots. -->
+          <td class="empty" rowspan="14"></td>
+          <td class="empty" rowspan="2"></td>
+          <td class="empty" rowspan="2"></td>
+          <td class="empty" rowspan="2"></td>
         </tr>
         <tr>
           <th>8:30 AM</th>
         </tr>
         <tr>
           <th>9:00 AM</th>
-          <td class="empty"></td>
           <td rowspan="3">The Tompkins Group</td>
           <td rowspan="4">Retirement Planning</td>
           <td rowspan="4">Drivers' Ed</td>
         </tr>
         <tr>
           <th>9:30 AM</th>
+          <td class="empty" rowspan="3"></td>
         </tr>
         <tr>
           <th>10:00 AM</th>
         </tr>
         <tr>
           <th>10:30 AM</th>
-          <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="empty"></td>
+          <td class="empty" rowspan="3"></td>
           <td rowspan="4">Pearson Planning</td>
         </tr>
         <tr>
           <th>11:00 AM</th>
-          <td class="empty"></td>
           <td rowspan="5">Ohio Conference of Librarians</td>
-          <td class="empty"></td>
           <td rowspan="3">The Senior Group</td>
           <td rowspan="5">Movie Club</td>
         </tr>
@@ -101,29 +142,24 @@
         <tr>
           <th>12:30 PM</th>
           <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="empty"></td>
+          <td class="empty" rowspan="3"></td>
           <td rowspan="2">Senior Luncheon</td>
         </tr>
         <tr>
           <th>1:00 PM</th>
-          <td>Computer Expo Opening Session</td>
+          <td rowspan="9">Computer Expo Opening Session</td>
         </tr>
         <tr>
           <th>1:30 PM</th>
-          <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="empty"></td>
+          <td class="empty" rowspan="3">
+          </td>
           <td class="empty"></td>
           <td rowspan="5">Senior Class</td>
+          <td class="empty" rowspan="4"></td>
         </tr>
         <tr>
           <th>2:00 PM</th>
-          <td class="empty"></td>
           <td rowspan="7">Ohio Book Resale Setup</td>
-          <td class="empty"></td>
-          <td class="empty"></td>
           <td rowspan="4">Mothers of Multiples</td>
         </tr>
         <tr>
@@ -150,9 +186,51 @@
           <th>5:00 PM</th>
         </tr>
       </tbody>
-
+      <!-- The caption is used at the bottom right. -->
+      <caption>*All times are posted in Eastern Standard Time.</caption>
     </table>
   </section>
+
+  <section>
+    <!-- The second table -->
+    <table>
+      <!-- A table row that contains the headings -->
+      <tr>
+        <th>Rooms</th>
+        <th>Sunrise Room</th>
+        <th>Mountain View Room</th>
+        <th>Arbor Hall</th>
+        <th>Mitchell Theatre</th>
+        <th>Gold Room</th>
+        <th>Blue Room</th>
+        <th>Green Room</th>
+      </tr>
+      <!-- A table row that contains the data. -->
+      <tr>
+        <th>Maximum Capactiy:</th>
+        <td>80</td>
+        <td>150</td>
+        <td>190</td>
+        <td>120</td>
+        <td>40</td>
+        <td>30</td>
+        <td>55</td>
+      </tr>
+    </table>
+  </section>
+  <!-- The footer -->
+  <footer>
+    <!-- The text is split up so it can be put into columns. -->
+    <p>
+      Hamilton Conference Center
+    </p>
+    <p>
+      8711 West Park Lane<br>
+      Hamilton, OH 45011
+    </p>
+    <p><a href="tel:+15135557911">(513) 555 - 7911</a><br>
+      <a href="mailto:yancyinwe@hconfcenter.org">yancyinwe@hconfcenter.org</a></p>
+  </footer>
 </body>
 
 </html>

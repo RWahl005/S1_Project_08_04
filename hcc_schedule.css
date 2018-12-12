@@ -4,24 +4,98 @@
    Case Problem 4
 
    Schedule Table Style Sheet
-   Author: 
-   Date:   
+   Author: Ryan Wahl
+   Date:   12.12.18
 
    Filename:         hcc_schedule.css
    Supporting Files: 
 
 */
 
+/* 
+    Table Styles
+*/
+
 table {
+    /* A border with a width of 2pixels that is solid and black */
     border: 2px solid black;
+    /* Makes sure that borders are not duplicated. (There is 1 border instead of 2 around cells. */
     border-collapse: collapse;
+    /* The the background color to what is basically white */
+    background-color: rgb(212, 211, 211);
+    /* Sets the margin around the table to 20 pixels. */
+    margin: 20px;
 }
 
 th,
 td {
+    /* A border with a width of 1 pixel that is solid and black. (This border is overridden by the table border due to the width) */
     border: 1px solid black;
+    /* Centers the text */
+    text-align: center;
+    /* Centers the column data within the cell vertically */
+    vertical-align: center;
 }
 
-/* .empty {
+td {
+    /* Sets borders on the left and right of table data cells (Overrides the border set for th and td defined above) */
+    border-left: 1px solid rgb(161, 161, 161);
+    border-right: 1px solid rgb(163, 163, 163);
+}
+
+td {
+    /* Sets the width of table data cells to 12.5% (Note: 12.5*8=100) */
+    width: 12.5%;
+}
+
+/* All cells that don't have a class of empty */
+td:not(.empty) {
+    background-color: white;
+}
+
+/* Uses the first column group */
+col#firstCol {
+    background-color: rgb(146, 235, 194);
+}
+
+/* The thead row group */
+thead {
+    background-color: rgb(156, 156, 240);
+}
+
+/* Table data cells within the thead */
+thead td {
     border: none;
-} */
+    background-color: rgb(78, 78, 250);
+    color: white;
+}
+
+tfoot td {
+    background-color: lightgray;
+}
+
+
+/* 
+    Table Caption
+*/
+/* The caption element within the table */
+table caption {
+    /* Sets the caption to the bottom of the table */
+    caption-side: bottom;
+    /* Sets the text align to right. */
+    text-align: right;
+}
+
+/* 
+    Table Links
+*/
+table a {
+    /* Removes the underline */
+    text-decoration: none;
+    color: blue;
+}
+
+/* When the link is hovered over */
+table a:hover {
+    color: rgb(122, 122, 236);
+}

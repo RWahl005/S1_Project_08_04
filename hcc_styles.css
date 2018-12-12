@@ -1,0 +1,187 @@
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 6
+   Case Problem 4
+
+   Hamilton Conference Center Style Sheet
+   Author: Ryan Wahl
+   Date:  12.12.18
+
+   Filename:         hcc_styles.css
+   Supporting files: hcc_schedule.css
+
+*/
+
+/* 
+    Body Styles
+*/
+html {
+    background-color: rgb(20, 138, 248);
+}
+
+body {
+    /* Sets the width of the body to 75% */
+    width: 75%;
+    /* Sets the margin to auto in order to center the body horizontally in the page */
+    margin: auto;
+    background-color: rgb(183, 224, 248);
+    /* Sets the display to flex using progressive enhancement */
+    display: -webkit-flex;
+    display: flex;
+    /* Sets the flex flow to column with no wrapping using progressive enhancement */
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 
+
+    Columns Css
+
+*/
+footer {
+    /* Sets the column count (number of columns) to 2 */
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+footer p:first-of-type {
+    /* Makes the first paragraph of the footer ignore the columns */
+    -moz-column-span: all;
+    -webkit-column-span: all;
+    column-span: all;
+}
+
+/* 
+
+    Navigation Bar
+
+*/
+
+nav {
+    /* Width of 100% so it covers the entire page. */
+    width: 100%;
+    /* Sets the display to block */
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* All uls*/
+ul {
+    /* Resets the margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Sets the background color */
+    background-color: rgb(0, 153, 255);
+}
+
+/* When one of the categories are hovered over */
+ul>li:hover {
+    background-color: rgb(12, 149, 240);
+}
+
+header nav>ul>li>a {
+    /* Sets the display to block */
+    display: block;
+    /* Removes the underline */
+    text-decoration: none;
+    /* Sets the text color to white. */
+    color: white;
+    /* Centers the text */
+    text-align: center;
+}
+
+header nav>ul>li {
+    display: block;
+    background-color: rgb(0, 153, 255);
+    padding: 10px;
+}
+
+/* 
+    Footer
+*/
+footer p {
+    text-align: center;
+    color: rgb(116, 116, 116);
+}
+
+footer {
+    background-color: lightgray;
+}
+
+footer a {
+    color: rgb(116, 116, 116);
+    /* Removes the underline from links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(252, 252, 252);
+}
+
+/* 
+
+    Media Query Styles
+
+*/
+/* Mobile screen size */
+@media only screen and (max-width: 480px) {
+
+    ul li {
+        /* Sets the padding of the list */
+        padding: 10px 0px 10px 0px;
+    }
+
+    body {
+        width: 100%;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 481px) {
+    ul {
+        /* Sets the navigation bar to use flex. */
+        display: -webkit-flex;
+        display: flex;
+        /* Sets the navigation to be a row with no wrapping. */
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        /* Removes the bullet points */
+        list-style-type: none;
+        width: 100%;
+        /* Evenly spaces the navbar items. */
+        -webkit-justify-content: space-evenly;
+        justify-content: space-evenly;
+    }
+
+    body {
+        width: 100%;
+    }
+}
+
+/* Computer Styles (Not the exact size as it works better with the table at this size) */
+@media only screen and (min-width: 900px) {
+
+    ul {
+        /* Sets the navigation bar to use flex. */
+        display: -webkit-flex;
+        display: flex;
+        /* Sets the navigation to be a row with no wrapping. */
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        /* Removes the bullet points */
+        list-style-type: none;
+        width: 100%;
+        /* Evenly spaces the navbar items. */
+        -webkit-justify-content: space-evenly;
+        justify-content: space-evenly;
+    }
+
+    body {
+        width: 75%;
+    }
+}
